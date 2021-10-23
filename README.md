@@ -5,4 +5,4 @@ It contains both a mocked native android app client and a mocked web client.
 
 Language used is Java for both clients to make the transition into real system eaasier. 
 
-Owners are Fanny Söderlund, Malek Alabed, Nishat Jahan, Suzanne Zomer
+Owners are Fanny Söderlund, Malek Alabed, Nishat Jahan, Suzanne Zomer, Ismail Eyamba
