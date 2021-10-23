@@ -1,0 +1,11 @@
+### get a specicif decive
+GET https://6967ccb6-8f01-46e3-b7cb-9567d5d8c139.mock.pstmn.io/devices?id=001
+Accept: application/json
+
+### get all devices
+GET https://6967ccb6-8f01-46e3-b7cb-9567d5d8c139.mock.pstmn.io/devices
+Accept: application/json
+
+### change state of a decive
+PUT https://6967ccb6-8f01-46e3-b7cb-9567d5d8c139.mock.pstmn.io/devices/001?state=off
+Accept: application/json
