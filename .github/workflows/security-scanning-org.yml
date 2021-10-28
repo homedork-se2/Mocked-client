@@ -23,7 +23,7 @@ jobs:
         uses: checkmarx/kics-action@v1.2
         with:
           path: 'terraform'
-          output_path: results-dir
+          output_path: results-dir/results.sarif
           platform_type: terraform
           output_formats: 'sarif'
       - name: Show results
