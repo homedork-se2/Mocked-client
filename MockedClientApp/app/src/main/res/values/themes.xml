@@ -11,7 +11,13 @@
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
-        <!-- Customize your theme here. -->
+        <!-- Text sizes -->
+        <item name="android:textAppearance">@style/NormalTextSize</item>
+        <item name="android:textAppearanceLarge">@style/NormalTextSize.Large</item>
+        <item name="android:textAppearanceMedium">@style/NormalTextSize.Medium</item>
+        <item name="android:textAppearanceSmall">@style/NormalTextSize.Small</item>
+        <item name="android:editTextStyle">@style/EditText_NormalTextSize</item>
+
     </style>
 
     <!-- HIGH CONTRAST THEME -->
@@ -24,9 +30,15 @@
         <item name="colorSecondary">@color/teal_200</item>
         <item name="colorSecondaryVariant">@color/teal_700</item>
         <item name="colorOnSecondary">@color/white</item>
-        <!-- Customize your theme here. -->
+        <!-- Custom colors -->
         <item name="android:textColor">@color/white</item>
         <item name="android:background">@color/dark_grey</item>
+        <!-- Text sizes -->
+        <item name="android:textAppearance">@style/BigTextSize</item>
+        <item name="android:textAppearanceLarge">@style/BigTextSize.Large</item>
+        <item name="android:textAppearanceMedium">@style/BigTextSize.Medium</item>
+        <item name="android:textAppearanceSmall">@style/BigTextSize.Small</item>
+        <item name="android:editTextStyle">@style/EditText_BigTextSize</item>
     </style>
 
     <style name="Theme.MockedClient.NoActionBar">
