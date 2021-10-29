@@ -17,18 +17,19 @@
 
     </PreferenceCategory>
 
-    <PreferenceCategory app:title="@string/sync_header">
+    <PreferenceCategory app:title="View preferences">
 
         <SwitchPreferenceCompat
-            app:key="sync"
-            app:title="@string/sync_title" />
+            app:key="contrast"
+            app:title="High Contrast"
+            app:summary="High contrast mode makes it easier for some users to read text in the app" />
 
         <SwitchPreferenceCompat
-            app:dependency="sync"
-            app:key="attachment"
-            app:summaryOff="@string/attachment_summary_off"
-            app:summaryOn="@string/attachment_summary_on"
-            app:title="@string/attachment_title" />
+            app:key="vibration"
+            app:title="Haptic vibration"
+            app:summaryOff="No vibration in the app"
+            app:summaryOn="Each press returns a small vibration"/>
+        
 
     </PreferenceCategory>
     <PreferenceCategory app:title="@string/messages_header">
