@@ -2,8 +2,10 @@ package com.example.mockedclient;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
+import androidx.preference.PreferenceManager;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -21,11 +23,10 @@ public class MainActivity extends AppCompatActivity {
         TextView text2 = findViewById(R.id.textView2);
         Button settingsButton = findViewById(R.id.settingsButton);
 
-
         settingsButton.setOnClickListener(v -> {
             // opening a new intent to open settings activity.
-            Intent i = new Intent(MainActivity.this, SettingsActivity.class);
-            startActivity(i);
+            Intent intent = new Intent(this, SettingsActivity.class);
+            startActivity(intent);
         });
     }
 }

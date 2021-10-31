@@ -10,15 +10,10 @@ public class SettingsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.settings_activity);
 
-        Objects.requireNonNull(getSupportActionBar()).setTitle("Settings");
 
-        if (findViewById(R.id.idFrameLayout) != null) {
-            if (savedInstanceState != null) {
-                return;
-            }
-            getFragmentManager().beginTransaction().replace(R.id.idFrameLayout, new SettingsFragment()).commit();
+        getSupportFragmentManager().beginTransaction()
+                .replace(android.R.id.content, new SettingsFragment())
+                .commit();
         }
     }
-}
