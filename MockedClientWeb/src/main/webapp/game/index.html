@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" onclick="jump()">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>HomeDork gaming platform</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="game">
+    <img id="character" src="resources/stickman.gif" alt="">
+    <img id="block" src="resources/stone.png" alt="">
+  </div>
+  <div class="menu">
+    <div class="dropdown">
+      <button class="dropbtn">Choose your character</button>
+      <div class="dropdown-content">
+        <a onclick="changeCharacter('./resources/santa.gif')">Santa</a>
+        <a onclick="changeCharacter('./resources/batman.gif')">Batman</a>
+        <a onclick="changeCharacter('./resources/stickman.gif')">Stickman</a>
+        <a onclick="changeCharacter('./resources/cow.gif')">Cow</a>
+        <a onclick="changeCharacter('./resources/pikachu.gif')">Pikachu</a>
+      </div>
+    </div>
+
+    <p id="score">Score: <span id="scoreSpan"></span></p>
+    <p id="gameOver"></p>
+    <p>Highscore: <span id="highScore"></span></p>
+  </div>
+  <script src="game.js"></script>
+</body>
+
+</html>
