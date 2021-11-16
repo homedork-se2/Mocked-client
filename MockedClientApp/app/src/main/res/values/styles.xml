@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Normal font -->
+    <style name="NormalTextSize" parent="@android:style/TextAppearance">
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="NormalTextSize.Large" >
+        <item name="android:textSize">22sp</item>
+    </style>
+    <style name="NormalTextSize.Medium" >
+        <item name="android:textSize">18sp</item>
+    </style>
+    <style name="NormalTextSize.Small" >
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="EditText_NormalTextSize" parent="@android:style/Widget.EditText">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+
+    <!-- Big font -->
+    <style name="BigTextSize" parent="@android:style/TextAppearance">
+        <item name="android:textSize">22sp</item>
+    </style>
+    <style name="BigTextSize.Large" >
+        <item name="android:textSize">30sp</item>
+    </style>
+    <style name="BigTextSize.Medium" >
+        <item name="android:textSize">25sp</item>
+    </style>
+    <style name="BigTextSize.Small" >
+        <item name="android:textSize">20sp</item>
+    </style>
+    <style name="EditText_BigTextSize" parent="@android:style/Widget.EditText">
+        <item name="android:textSize">22sp</item>
+    </style>
+</resources>
