@@ -12,5 +12,32 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+        <!-- Text sizes -->
+        <item name="android:textAppearance">@style/NormalTextSize</item>
+        <item name="android:textAppearanceLarge">@style/NormalTextSize.Large</item>
+        <item name="android:textAppearanceMedium">@style/NormalTextSize.Medium</item>
+        <item name="android:textAppearanceSmall">@style/NormalTextSize.Small</item>
+        <item name="android:editTextStyle">@style/EditText_NormalTextSize</item>
+    </style>
+
+    <!-- HIGH CONTRAST THEME -->
+    <style name="HighContrast" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryVariant">@color/dark_grey</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/bright_orange</item>
+        <item name="colorSecondaryVariant">@color/dark_orange</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <!-- Custom colors -->
+        <item name="android:textColor">@color/bright_orange</item>
+        <item name="android:background">@color/black</item>
+        <!-- Text sizes -->
+        <item name="android:textAppearance">@style/BigTextSize</item>
+        <item name="android:textAppearanceLarge">@style/BigTextSize.Large</item>
+        <item name="android:textAppearanceMedium">@style/BigTextSize.Medium</item>
+        <item name="android:textAppearanceSmall">@style/BigTextSize.Small</item>
+        <item name="android:editTextStyle">@style/EditText_BigTextSize</item>
     </style>
 </resources>
