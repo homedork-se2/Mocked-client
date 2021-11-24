@@ -18,9 +18,16 @@
             app:summaryOn="Each press returns a small vibration"/>
 
         <SwitchPreferenceCompat
+            app:key="magnifyingZoom"
+            app:title="Magnifying zoom"
+            app:summaryOff="No zoom in the app"
+            app:summaryOn="zoom is enabled"/>
+      
+        <SwitchPreferenceCompat
             app:key="contrast"
             app:title="High Contrast"
             app:summary="High contrast mode makes it easier for some users to read text in the app" />
+
 
 
     </PreferenceCategory>
