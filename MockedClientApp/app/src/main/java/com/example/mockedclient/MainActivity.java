@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     private ImageButton btnSpeak;
     private TextView tvText;
     protected static final int RESULT_SPEECH= 1;
+    private Button DiscoMood;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,8 +58,22 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(this, SettingsActivity.class);
             startActivity(intent);
         });
-        
+
+        DiscoMood =(Button) findViewById(R.id.button2);
+        DiscoMood.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openDiscoMoodActivity();
+            }
+        });
+
     }
+
+    private void openDiscoMoodActivity() {
+        Intent intent = new Intent(this ,DiscoMoodActivity.class);
+        startActivity(intent);
+    }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
