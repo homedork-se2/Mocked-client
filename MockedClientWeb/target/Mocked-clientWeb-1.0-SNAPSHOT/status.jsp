@@ -18,19 +18,31 @@
                 <h1 id="contentTitle">Personalized Status Commands</h1>
             </div>
             <div class="statusCommands">
-                <div class="rectangle">
-                    <p class="moodTitle">Mood One</p>
+                <div class="rectangle" href="">
+                    <p class="moodTitle">Im so tired !!</p>
                     <hr class="line">
-                    <p class="moodDevice">Living room Lamp</p>
+                    <p class="moodDevice">Living Room Lamp</p>
                     <p class="moodDevice">Radio</p>
-                    <p class="moodDevice">RGB lights bedroom</p>
+                    <p class="moodDevice">RGB lights Bedroom</p>
                 </div>
                 <div class="rectangle">
+                    <p class="moodTitle">Party Time</p>
+                    <hr class="line">
+                    <p class="moodDevice">Living Room Lamp</p>
+                    <p class="moodDevice">RGB Lights Bedroom</p>
+                    <p class="moodDevice">Hallway Lamp</p>
                 </div>
                 <div class="rectangle">
+                    <p class="moodTitle">I Hate My Life</p>
+                    <hr class="line">
+                    <p class="moodDevice">Radio</p>
+                    <p class="moodDevice">Kitchen Lamp</p>
+                    <p class="moodDevice">Fan</p>
+                    <p class="moodDevice">Bedroom Lamp</p>
                 </div>
                 <div class="rectangleAdd">
-                    <p>Add Another Mood</p>
+                    <p id="moodAddText">Add Status Command</p>
+                    <img href="" id="addImage" src="add.png"/>
                 </div>
             </div>
         </div>

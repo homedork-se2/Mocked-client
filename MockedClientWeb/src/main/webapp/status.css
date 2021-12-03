@@ -57,13 +57,15 @@
                 background-image: url('sampleBackround.jpg');
                 background-position: left top;
                 background-repeat: repeat;
+                filter: drop-shadow(4px 4px 10px rgba(0,0,0,0.3));
             }
             .moodTitle{
                 text-align: center;
                 margin:0px;
-                padding: 10px 10px 0px 0px;
+                padding: 8px 8px 0px 0px;
 
                 font-size: 22px;
+                font-weight: bold;
             }
             .line{
                 width: 100%;
@@ -84,8 +86,20 @@
                 height: 200px;
                 width: 310px;
                 float: left;
+                alignment: center;
 
                 border-radius: 25px;
+            }
+            #moodAddText{
+                text-align: center;
+                padding-top: 30px;
+                font-size: 20px;
+                font-weight: bold;
+            }
+            #addImage{
+                width: 50px;
+                height: 50px;
+                margin-left: 130px;
             }
 
     /* Left Sidebar */
