@@ -23,23 +23,76 @@
             proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
 
 
+        <button id="disco-button" onclick="discoMode()">Turn on disco mode</button>
+
+        <div class="disco-lamps"
+             style="display: none; flex-direction: row; margin-top: 10vh; justify-content: space-around; max-width: 100vh">
+            <div class="light" style="width: 20px; height: 20px"></div>
+            <div class="light" style="width: 20px; height: 20px"></div>
+            <div class="light" style="width: 20px; height: 20px"></div>
+            <div class="light" style="width: 20px; height: 20px"></div>
+            <div class="light" style="width: 20px; height: 20px"></div>
+            <div class="light" style="width: 20px; height: 20px"></div>
+            <div class="light" style="width: 20px; height: 20px"></div>
+            <div class="light" style="width: 20px; height: 20px"></div>
+            <div class="light" style="width: 20px; height: 20px"></div>
+            <div class="light" style="width: 20px; height: 20px"></div>
+            <div class="light" style="width: 20px; height: 20px"></div>
+            <div class="light" style="width: 20px; height: 20px"></div>
+        </div>
+
         <script>
+
+            function discoMode() {
+                const lights = document.querySelectorAll('.light');
+                const disco = document.querySelector('.disco-lamps');
+                const discoButton = document.getElementById('disco-button')
+
+                if (disco.style.display === "none") {
+                    discoButton.innerHTML = "Turn off disco mode";
+                    disco.style.display = "flex";
+                } else {
+                    discoButton.innerHTML = "Turn on disco mode";
+                    disco.style.display = "none";
+                }
+                setInterval(() => {
+                    lights.forEach(function (self) {
+                        let color = getRandomHEX();
+                        self.style.backgroundColor = color;
+                        self.style["boxShadow"] =
+                            "0 0 0 rgba(255,255,255,0.2), 0 20px 100px 8px " +
+                            color +
+                            ", 0 10px 50px 0 #fff";
+                    });
+                }, 300);
+            }
+
+            function getRandomHEX() {
+                let letters = "0123456789ABCDEF",
+                    value = "#";
+                for (let i = 0; i < 6; i++) {
+                    value += letters[Math.floor(Math.random() * 16)];
+                }
+                return value;
+            }
+
+
             function runSpeechRecognition() {
                 const output = document.getElementById("output");
                 const voiceButton = document.getElementById("voiceButton");
                 var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
                 const recognition = new SpeechRecognition();
 
-                recognition.onstart = function() {
+                recognition.onstart = function () {
                     voiceButton.textContent = "Listening..";
                 };
 
-                recognition.onspeechend = function() {
+                recognition.onspeechend = function () {
                     voiceButton.textContent = "Text to speech";
                     recognition.stop();
                 }
 
-                recognition.onresult = function(event) {
+                recognition.onresult = function (event) {
                     const transcript = event.results[0][0].transcript;
                     output.innerHTML = "<b>Text:</b> " + transcript;
                     output.classList.remove("hide");
