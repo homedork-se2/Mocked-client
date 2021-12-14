@@ -1,8 +1,22 @@
+<%@ page isELIgnored="false" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <link rel="stylesheet" href="status.css">
     <title>Personalized Status Commands</title>
+    <script>
+
+        function addMood(){
+            window.location = "addMood";
+        }
+
+        function transferCallToServlet(i)
+        {
+            document.requestForm.action = "status";
+            document.requestForm.download.value=i;
+            document.requestForm.submit();
+        }
+    </script>
 </head>
 <body>
     <div class="topMenuBar">
@@ -17,33 +31,18 @@
             <div class="contentHeader">
                 <h1 id="contentTitle">Personalized Status Commands</h1>
             </div>
+
             <div class="statusCommands">
-                <div class="rectangle" href="">
-                    <p class="moodTitle">Im So Tired !!</p>
-                    <hr class="line">
-                    <p class="moodDevice">Living Room Lamp</p>
-                    <p class="moodDevice">Radio</p>
-                    <p class="moodDevice">RGB lights Bedroom</p>
-                </div>
-                <div class="rectangle">
-                    <p class="moodTitle">Party Time</p>
-                    <hr class="line">
-                    <p class="moodDevice">Living Room Lamp</p>
-                    <p class="moodDevice">RGB Lights Bedroom</p>
-                    <p class="moodDevice">Hallway Lamp</p>
-                </div>
-                <div class="rectangle">
-                    <p class="moodTitle">I Hate My Life</p>
-                    <hr class="line">
-                    <p class="moodDevice">Radio</p>
-                    <p class="moodDevice">Kitchen Lamp</p>
-                    <p class="moodDevice">Fan</p>
-                    <p class="moodDevice">Bedroom Lamp</p>
-                </div>
-                <div class="rectangleAdd">
-                    <p id="moodAddText">Add Status Command</p>
-                    <img href="" id="addImage" src="add.png"/>
-                </div>
+                <form name="requestForm" method="post">
+                    <input type="hidden" name="download" >
+
+                        ${moodButtons}
+
+                        <div class="rectangleAdd">
+                            <p id="moodAddText">Add Status Command</p>
+                            <img onclick="addMood()" id="addImage" src="add.png"/>
+                        </div>
+                </form>
             </div>
         </div>
 

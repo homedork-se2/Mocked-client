@@ -11,7 +11,7 @@
 
         <p>Text input/output</p>
 
-        <a href="status.jsp">Personalized Status Commands</a>
+        <a href="status">Personalized Status Commands</a>
 
         <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit,
             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
