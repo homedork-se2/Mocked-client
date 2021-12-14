@@ -17,11 +17,11 @@ public class StatusServlet extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 
         stringBuilder = new StringBuilder();
-        getStatusCommands(1,"Stressed", "Radio", "Living room Lamp", "Heating");
-        getStatusCommands(2,"Happy", "Bedroom Lamp", "Living room Lamp", "Heating");
-        String moodButtons = stringBuilder.toString();
+        getStatusCommands(0,"Stress", "stressed.PNG", "Radio", "Living room Lamp", "Heating", "");
+        getStatusCommands(1,"Happy", "happy.PNG","Bedroom Lamp", "Living room Lamp", "Heating", "Kitchen Lamp");
+        getStatusCommands(2,"Tired", "tired.PNG", "Bedroom Lamp", "Radio", "Fan", "");
 
-        System.out.println(moodButtons);
+        String moodButtons = stringBuilder.toString();
 
         request.setAttribute("moodButtons", moodButtons);
         request.getRequestDispatcher("/status.jsp").forward(request, response);
@@ -32,17 +32,27 @@ public class StatusServlet extends HttpServlet {
         String moodId = request.getParameter("download");
         System.out.println("moodId "+ moodId);
 
+        stringBuilder = new StringBuilder();
+        getStatusCommands(0,"Stress", "stressed.PNG", "Radio", "Living room Lamp", "Heating", "");
+        getStatusCommands(1,"Happy", "happy.PNG","Bedroom Lamp", "Living room Lamp", "Heating", "Kitchen Lamp");
+        getStatusCommands(2,"Tired", "tired.PNG", "Bedroom Lamp", "Radio", "Fan", "");
+
+        String moodButtons = stringBuilder.toString();
+        request.setAttribute("moodButtons", moodButtons);
         request.getRequestDispatcher("/status.jsp").forward(request, response);
     }
 
-    public void getStatusCommands(int moodId,String moodName, String device1, String device2, String device3){
+
+
+    public void getStatusCommands(int moodId,String moodName, String blissImg, String device1, String device2, String device3, String device4){
 
         stringBuilder.append("<div class=\"rectangle\" onclick=\"transferCallToServlet("+ moodId +")\">" +
-                "<p class=\"moodTitle\">" + moodName +"</p>" +
+                "<div class=\"moodHeader\"><p class=\"moodTitle\">" + moodName +"</p><img class=\"blissImg\" src=\""+ blissImg +"\"/></div>" +
                 "<hr class=\"line\">" +
                 "<p class=\"moodDevice\">" + device1 +"</p>" +
                 "<p class=\"moodDevice\">" + device2 +"</p>" +
                 "<p class=\"moodDevice\">" + device3 +"</p>" +
+                "<p class=\"moodDevice\">" + device4 +"</p>" +
                 "</div>");
     }
 

@@ -15,12 +15,14 @@
             document.requestForm.action = "status";
             document.requestForm.download.value=i;
             document.requestForm.submit();
+
+
         }
     </script>
 </head>
 <body>
     <div class="topMenuBar">
-        <h1 id="topTitle">Home Dork menu bar</h1>
+        <h1 id="topTitle">Home Dork</h1>
     </div>
 
     <div class="contentWrapper">

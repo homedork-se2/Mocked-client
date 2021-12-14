@@ -8,28 +8,26 @@
         text-align: left;
         padding-top: 40px;
         padding-left: 30px;
+
+        font-family: Helvetica;
     }
 
 
 /* CONTENT WRAPPER */
 .contentWrapper{
     overflow: hidden;
-    margin: 0;
     display:flex;
     width: 100%;
-    margin-bottom: 0px;
+    margin: 0px;
 }
     /* Main Content */
     .mainContent {
         width: 56%;
         min-width: 800px;
         max-width: 1000px;
-        padding-top: 20px;
-        padding-bottom: 20px;
-        padding-left: 30px;
-        padding-right: 30px;
+        padding: 20px 30px;
         overflow: hidden;
-        background-color: lightslategray;
+        background-color: lightsteelblue;
     }
         /*Header main content*/
         .contentHeader{
@@ -37,6 +35,7 @@
         }
             #contentTitle{
                 text-align: center;
+                font-family: Helvetica ;
             }
         /*Status commands*/
         .statusCommands{
@@ -59,24 +58,39 @@
                 width: 310px;
                 float: left;
 
-                border-radius: 25px;
-                border: 4px solid black;
-                background-image: url('sampleBackround.jpg');
-                background-position: left top;
-                background-repeat: repeat;
+                border-radius: 5px;
+                border: 2px solid black;
+                /*background-image: url('sampleBackround.jpg');*/
+                /*background-position: left top;*/
+                /*background-repeat: repeat;*/
+                background-color: white;
                 filter: drop-shadow(4px 4px 10px rgba(0,0,0,0.3));
             }
-            .moodTitle{
-                text-align: center;
-                margin:0px;
-                padding: 8px 8px 0px 0px;
+                .moodHeader {
+                    height: 49px;
+                }
+                    .moodTitle{
+                        float: right;
+                        text-align: center;
+                        margin-right: 100px;
+                        padding-left: 10px;
 
-                font-size: 22px;
-                font-weight: bold;
-            }
+                        font-size: 22px;
+                        font-weight: normal;
+                        font-family: Consolas ;
+                        text-transform: uppercase;
+                        ;
+                    }
+                    .blissImg {
+                        height: 49px;
+                        object-fit: cover;
+                        position: relative;
+                        float: right;
+                    }
+
             .line{
                 width: 100%;
-                height: 3px;
+                height: 2px;
                 border-width:0px;
                 background-color: black;
                 color: black;
@@ -86,7 +100,9 @@
                 margin:0px;
                 padding:5px 40px;
 
+                font-weight: lighter;
                 font-size: 18px;
+                font-family: Consolas;
             }
 
             /*adding another device section*/
@@ -97,13 +113,15 @@
                 float: left;
                 alignment: center;
 
-                border-radius: 25px;
+                border-radius: 5px;
             }
             #moodAddText{
                 text-align: center;
                 padding-top: 30px;
+
                 font-size: 20px;
                 font-weight: bold;
+                font-family: Helvetica ;
             }
             #addImage{
                 width: 50px;
@@ -111,6 +129,15 @@
                 margin-left: 130px;
             }
 
+
+        .deviceList{
+            padding-left: 30px;
+            padding-right: 30px;
+            display: inline-block;
+            width: 800px;
+            alignment: center;
+
+        }
             /*device list section*/
             .listTitle{
                 align-content: center;

@@ -23,7 +23,7 @@
 <body>
 <body>
 <div class="topMenuBar">
-    <h1 id="topTitle">Home Dork menu bar</h1>
+    <h1 id="topTitle">Home Dork</h1>
 </div>
 
 <div class="contentWrapper">
@@ -35,6 +35,12 @@
             <h1 id="contentTitle">Add Devices</h1>
         </div>
         <div class="deviceList">
+
+            <form name="n" method="post">
+                <label for="nameMood">Name:</label><br>
+                <input type="text" id="nameMood" name="nameMood"><br>
+            </form>
+
             <form name="requestForm" method="post">
                 <input type="hidden" name="download">
             </form>
@@ -43,11 +49,6 @@
                     ${deviceList}
 
                 </ul>
-
-            <form name="n" method="post">
-                <label for="nameMood">Name:</label><br>
-                <input type="text" id="nameMood" name="nameMood"><br>
-            </form>
 
             <button onclick="submitMood(nameMood)">Create Status Command</button>
         </div>
