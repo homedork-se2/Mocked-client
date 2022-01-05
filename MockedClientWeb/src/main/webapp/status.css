@@ -1,0 +1,161 @@
+/*Menu bar top of page*/
+.topMenuBar {
+    width: 100%;
+    height: 120px;
+    background-color: lightsteelblue;
+}
+    #topTitle {
+        text-align: left;
+        padding-top: 40px;
+        padding-left: 30px;
+
+        font-family: Helvetica;
+    }
+
+
+/* CONTENT WRAPPER */
+.contentWrapper{
+    overflow: hidden;
+    display:flex;
+    width: 100%;
+    margin: 0px;
+}
+    /* Main Content */
+    .mainContent {
+        width: 56%;
+        min-width: 800px;
+        max-width: 1000px;
+        padding: 20px 30px;
+        overflow: hidden;
+        background-color: lightsteelblue;
+    }
+        /*Header main content*/
+        .contentHeader{
+
+        }
+            #contentTitle{
+                text-align: center;
+                font-family: Helvetica ;
+            }
+        /*Status commands*/
+        .statusCommands{
+            padding-left: 30px;
+            padding-right: 30px;
+            display: inline-block;
+            width: 800px;
+            alignment: center;
+        }
+            .mood{
+                margin: 15px 30px;
+                height: 200px;
+                width: 310px;
+                float: left;
+                visibility: hidden;
+            }
+            .rectangle {
+                margin: 15px 30px;
+                height: 200px;
+                width: 310px;
+                float: left;
+
+                border-radius: 5px;
+                border: 2px solid black;
+                /*background-image: url('sampleBackround.jpg');*/
+                /*background-position: left top;*/
+                /*background-repeat: repeat;*/
+                background-color: white;
+                filter: drop-shadow(4px 4px 10px rgba(0,0,0,0.3));
+            }
+                .moodHeader {
+                    height: 49px;
+                }
+                    .moodTitle{
+                        float: right;
+                        text-align: center;
+                        margin-right: 100px;
+                        padding-left: 10px;
+
+                        font-size: 22px;
+                        font-weight: normal;
+                        font-family: Consolas ;
+                        text-transform: uppercase;
+                        ;
+                    }
+                    .blissImg {
+                        height: 49px;
+                        object-fit: cover;
+                        position: relative;
+                        float: right;
+                    }
+
+            .line{
+                width: 100%;
+                height: 2px;
+                border-width:0px;
+                background-color: black;
+                color: black;
+            }
+            .moodDevice{
+                text-align: left;
+                margin:0px;
+                padding:5px 40px;
+
+                font-weight: lighter;
+                font-size: 18px;
+                font-family: Consolas;
+            }
+
+            /*adding another device section*/
+            .rectangleAdd{
+                margin: 15px 30px;
+                height: 200px;
+                width: 310px;
+                float: left;
+                alignment: center;
+
+                border-radius: 5px;
+            }
+            #moodAddText{
+                text-align: center;
+                padding-top: 30px;
+
+                font-size: 20px;
+                font-weight: bold;
+                font-family: Helvetica ;
+            }
+            #addImage{
+                width: 50px;
+                height: 50px;
+                margin-left: 130px;
+            }
+
+
+        .deviceList{
+            padding-left: 30px;
+            padding-right: 30px;
+            display: inline-block;
+            width: 800px;
+            alignment: center;
+
+        }
+            /*device list section*/
+            .listTitle{
+                align-content: center;
+            }
+            .listItem{
+                align-content: center;
+            }
+
+    /* Left Sidebar */
+    .sidebarLeft {
+        width: 22%;
+        padding: 0px;
+        overflow: hidden;
+    }
+
+    /* Right Sidebar */
+    .sidebarRight {
+        width: 22%;
+        padding: 0px;
+        overflow: hidden;
+    }
